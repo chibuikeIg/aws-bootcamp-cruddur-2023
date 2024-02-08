@@ -8,15 +8,20 @@
 2. Login to your aws console and create IAM user and grant administrator permission. Generate Access & Secret key. 
 
 3. Install AWS CLI on gitpod workspace.
-   - Installation [Guide]()
-        `curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+   - Installation [Guide](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
+        ```
+        curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
         unzip awscliv2.zip
-        sudo ./aws/install`
+        sudo ./aws/install
+        
+        ```
 
 4. Configure Gitpod Workspace
 Configure gitpod workspace/environment to automatically bootstrap AWS CLI and project configuration during launch.
     - Configuration guide:
-        `tasks:
+
+        ```
+        tasks:
             - name: aws-cli
               env:
                 AWS_CLI_AUTO_PROMPT: on-partial
@@ -25,5 +30,7 @@ Configure gitpod workspace/environment to automatically bootstrap AWS CLI and pr
                 curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
                 unzip awscliv2.zip
                 sudo ./aws/install
-                cd $THEIA_WORKSPACE_ROOT`
+                cd $THEIA_WORKSPACE_ROOT
+
+        ```
 
