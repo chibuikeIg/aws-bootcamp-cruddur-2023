@@ -15,7 +15,8 @@ from services.create_message import *
 from services.show_activity import *
 
 
-// honeycomb OTEL
+# honeycomb OTEL
+s
 from opentelemetry import trace
 from opentelemetry.instrumentation.flask import FlaskInstrumentor
 from opentelemetry.instrumentation.requests import RequestsInstrumentor
