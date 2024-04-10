@@ -29,6 +29,7 @@ class UserActivities:
         "results-size": len(model)
       }
       segment.put_metadata('test_key', dict, 'test_namespace')
+      subsegment.put_annotation('seb_test_key', 'sub_test_value')
       xray_recorder.end_subsegment()
       xray_recorder.end_segment()
     return model
